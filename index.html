@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0f1e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+  <meta name="description" content="공인중개사 2차 시험 일일 학습 앱 — 기출 480문항, 모의고사, 오답노트 자동 관리">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>공인중개사 2차 학습</title>
+
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text x='16' y='24' font-size='24' text-anchor='middle' fill='%2360a5fa' font-family='serif' font-weight='600'>중</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <div id="app">
+    <header class="hdr">
+      <div class="hdr-top">
+        <h1>공인중개사 2차 학습</h1>
+        <div class="hdr-actions">
+          <button id="hdr-profile" class="hdr-profile" data-action="switch-profile" aria-label="프로필 전환"></button>
+          <button id="theme-toggle" class="icon-btn" data-action="theme-toggle" aria-label="테마 전환">☀</button>
+          <button class="icon-btn" data-action="show-help" aria-label="단축키 도움말">?</button>
+        </div>
+      </div>
+      <div class="hdr-sub">
+        <span id="today-date">—</span>
+        <div style="display:inline-flex;gap:6px">
+          <span id="hdr-streak" class="hdr-streak" style="display:none"></span>
+          <span id="hdr-dday" class="hdr-dday">📅</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="주요 메뉴">
+      <!-- app.js가 동적으로 채움 -->
+    </nav>
+
+    <!-- 각 page-* div는 app.js에서 동적 생성 -->
+  </div>
+
+  <div class="kbd-hint" aria-hidden="true">
+    <kbd class="kbd">?</kbd> 단축키
+  </div>
+
+  <noscript>
+    <div style="padding:40px 20px;text-align:center;color:#a8b8d8;font-family:sans-serif">
+      이 앱을 사용하려면 JavaScript를 활성화해 주세요.
+    </div>
+  </noscript>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
